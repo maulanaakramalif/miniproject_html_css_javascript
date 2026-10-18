@@ -1,0 +1,151 @@
+/* color based 78756c */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+nav{
+    background-color:#55f3df;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem 2rem
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.menu{
+    display: flex;
+    gap: 2.5rem;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: #333;
+}
+
+.toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.container{
+    padding:2.5rem
+
+}
+
+.hero{
+    padding-bottom: 5rem;
+}
+
+.hero h2{
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    margin-bottom: 10px;
+}
+
+.hero p{
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.galeri{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 15px;
+    align-items: start;
+    
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.title{
+    display: block;
+    padding: 1.8rem 0;
+}
+
+.title button{
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.isi{
+    display:none;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.card.aktif .isi{
+    display: block;
+}
+
+footer{
+    background-color: #55f3df;
+    text-align: center;
+    margin: 25px 0;
+    padding:20px
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+
+@media (max-width: 768px){
+    .toggle{
+        display:block;
+    }
+    .menu{
+        display:none;
+        justify-content: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color:#55f3df; 
+        position: absolute;
+        
+        left: 0;
+        text-align: center;
+        padding: 20px; 
+    }
+
+    .menu.aktif{
+        display: flex;
+    }
+}
